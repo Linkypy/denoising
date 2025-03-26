@@ -1,0 +1,20 @@
+Prinzip von ES:
+Varianz wird gemessen und wo es am niedrigsten ist, wird gestoppt.
+Weil wird von ausgegangen, dass es keine Verbesserungen mehr geben wird
+
+- scharfe Kanten und spitze Ecken tendenziell höchste Winkelunterschiede bei CAD Modelle
+	weil zwei Winkel aufeinander treffen mit ca 90 Grad Unterschied
+	Information über Form des Objektes liegt eher an Kanten und Löchern
+- Details wie Augen, Spitzen, kleine Wölbungen bei Non-CAD Modelle schwierigSer zum Rekonstruieren
+
+- größere glatte Flächen kleinster Winkelunterschied und am leichtesten zum Rekonstruieren
+
+- alle haben an einer Stelle ein Höchstwinkel von rund 179 Grad
+- Mix und Sinusspace höchste Winkelunterschiede
+- Salt & Pepper Surface niedrigste Winkelunterschiede
+- Salt & Pepper ähnlich niedrig
+- Sinus waren Winkel bei CAD Modelle sehr niedrig 
+(sehr viele glatte Flächen, leichter zu rekonstruieren, weil Sinus Noise eindeutig ist)
+(Bei runden Flächen schwierig zu sehen, ob es Noise oder ein Artefakt vom Modell ist)
+
+-Sinus und Sinusspace nicht mathematisch begründbar, weil im ES Paper diese Noise-Arten nicht getestet wurden

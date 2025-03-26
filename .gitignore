@@ -1,0 +1,16 @@
+datasets
+data
+scripts
+logs
+wandb
+_program
+ray_results
+util/__pycache__
+.ipynb_checkpoints
+
+*.obj
+*.ply
+*.ipynb
+sweep.yaml
+*.pyc
+*.stat

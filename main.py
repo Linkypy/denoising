@@ -119,7 +119,7 @@ def main():
             csv_writer = csv.writer(csv_file)
             #write header
             if gt_mesh != None:
-                csv_writer.writerow(["Epoch", "Loss", "MAD"])
+                csv_writer.writerow(["Epoch", "Loss", "MAD", "PSNR","EMV"])
             else:
                 csv_writer.writerow(["Epoch", "Loss"])
 
@@ -198,7 +198,7 @@ def main():
                             o1_mesh.vs = new_pos
                             Mesh.compute_face_normals(o1_mesh)
                             Mesh.compute_vert_normals(o1_mesh)
-                            csv_writer.writerow([epoch, loss.item(),Loss.mad(o1_mesh.fn, gt_mesh.fn)])
+                            csv_writer.writerow([epoch, loss.item(),Loss.mad(o1_mesh.fn, gt_mesh.fn),Loss.psnr(gt_mesh,o1_mesh),early_stopper.emv])
                         else:
                             csv_writer.writerow([epoch, loss.item()])
 
